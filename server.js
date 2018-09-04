@@ -10,7 +10,7 @@ const indexRouter = require('./routes')
 const storyRouter = require('./routes/story')
 
 //connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/tehran')
+mongoose.connect('mongodb://127.0.0.1:27017/tehran', { useNewUrlParser: true })
 const db = mongoose.connection
 //handle mongo error
 db.on('error', console.error.bind(console, 'connection error:'))

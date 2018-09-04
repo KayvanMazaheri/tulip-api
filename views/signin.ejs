@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%- include('head'); %>
+<body>
+    <div class="signin-form profile">
+        <h3>Login</h3>
+        
+        <div class="login-form">
+            <form action="/auth/signin" method="post">
+                <input type="text" name="email" placeholder="E-mail" required="">
+                <input type="password" name="password" placeholder="Password" required="">
+                <input type="submit" value="LOGIN NOW">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

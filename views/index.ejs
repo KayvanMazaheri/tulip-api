@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<%- include('head'); %>
+<body>
+    <div class="ui attached stackable menu">
+		<div class="ui container">
+			<a class="item"><i class="home icon"></i>Home</a>
+		</div>
+	</div>
+	<div class="ui container">
+		<form method="post" action="/stories/create">
+			<div class="ui form">
+				<div class="field">
+					<label>Text</label>
+					<input type="text" name="body">
+				</div>
+				<button type="submit" class="ui primary button">
+					Save
+				</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

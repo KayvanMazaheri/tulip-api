@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.String,
 		required: true,
 	}
-});
+})
 
 //authenticate input against database
 UserSchema.statics.authenticate = function (email, password) {
@@ -52,7 +52,7 @@ UserSchema.pre('save', function (next) {
 		.catch(err => {
 			next(err)
 		})
-});
+})
 
 module.exports = {
 	User: mongoose.model('User', UserSchema),

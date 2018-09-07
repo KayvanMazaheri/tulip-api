@@ -9,14 +9,19 @@ const authRoutes = require('./routes/auth')
 const indexRouter = require('./routes')
 const storyRouter = require('./routes/story')
 
-//connect to MongoDB
+// Start: Database initialization and configs
+
+// Connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/tehran', { useNewUrlParser: true })
 const db = mongoose.connection
-//handle mongo error
+
+// Handle mongo error
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', function () {
-	// we're connected!
+	console.log('we\'re connected!');
 })
+
+// End: Database initialization and configs
 
 const app = express()
 

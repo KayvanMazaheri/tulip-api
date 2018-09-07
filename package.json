@@ -1,7 +1,11 @@
 {
 	"name": "tulip",
 	"version": "0.0.1",
-	"description": "",
+	"description": "Social Microblogging Platform",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arastu/tulip.git"
+	},
 	"main": "index.js",
 	"scripts": {
 		"standard": "standard",

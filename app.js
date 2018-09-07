@@ -18,7 +18,7 @@ const db = mongoose.connection
 // Handle mongo error
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', function () {
-	console.log('we\'re connected!');
+  console.log('we\'re connected!')
 })
 
 // End: Database initialization and configs
@@ -30,23 +30,23 @@ app.set('view engine', 'ejs')
 app.use('/static', express.static('public'))
 
 // set morgan to log info about our requests for development use.
-app.use(morgan('dev'));
+app.use(morgan('dev'))
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const MongoStore = connectMongo(session)
 
-//use sessions for tracking logins
+// use sessions for tracking logins
 app.use(session({
-	secret: 'work hard',
-	resave: true,
-	saveUninitialized: false,
-	cookie: {
-		expires: 600000
-	},
-	store: new MongoStore({
-		mongooseConnection: db
-	})
+  secret: 'work hard',
+  resave: true,
+  saveUninitialized: false,
+  cookie: {
+    expires: 600000
+  },
+  store: new MongoStore({
+    mongooseConnection: db
+  })
 }))
 
 app.use('/auth', authRoutes)

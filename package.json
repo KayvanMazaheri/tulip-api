@@ -8,10 +8,10 @@
 	},
 	"main": "index.js",
 	"scripts": {
-		"standard": "standard",
-		"standard:fix": "standard --fix",
+		"standard": "npx standard",
+		"standard:fix": "npx standard --fix",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "nodemon ./bin/www"
+		"dev": "npx nodemon ./bin/www"
 	},
 	"author": "",
 	"license": "MIT",
